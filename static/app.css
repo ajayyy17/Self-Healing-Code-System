@@ -1,0 +1,25 @@
+/* app.css - lightweight styling */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --accent:#2b8cff;
+  --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,
+    system-ui, -apple-system,
+    'Segoe UI', Roboto,
+    'Helvetica Neue',
+    Arial; background:var(--bg);
+    margin:0; color:#111}
+.container{max-width:480px;margin:36px auto;padding:20px}
+.form{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(20,20,30,0.06)}
+.form h1{margin-top:0;text-align:center}
+label{display:block;margin-top:12px;font-weight:600}
+input[type=number], select{width:100%;padding:10px;border:1px solid #e0e6ef;border-radius:8px;margin-top:6px;font-size:15px}
+button{margin-top:18px;width:100%;padding:12px;border-radius:10px;border:0;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}
+button:disabled{opacity:0.6;cursor:not-allowed}
+.result, .message{margin-top:14px;padding:12px;border-radius:8px}
+.message{background:#fff7e6;border:1px solid #ffe8b5;color:#6b4a00}
+.result{background:#f0f8ff;border:1px solid #d6ebff;color:#042a56}
+.footer{text-align:center;margin-top:12px;color:var(--muted);font-size:13px}
