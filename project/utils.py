@@ -38,8 +38,8 @@ def asthma_prediction(BMI, Family_History, Smoking_Status, Allergies, Air_Pollut
     apl_enc = _apl_ohe.transform([[Air_Pollution_Level]])
     pal_enc = _pal_ohe.transform([[Physical_Activity_Level]])
     
-    # Concatenate horizontally to form a single feature vector for prediction
-    x_data = np.hstack((BMI_scaled, fh_arr, ss_enc, allergies_enc, apl_enc, pal_enc))  # shape (1, n_features)
+    # Concatenate horizontally to form a single feature vector for prediction 
+    x_data = np.vstack((BMI_scaled, fh_arr, ss_enc, allergies_enc, apl_enc, pal_enc)) 
     asthma_pred = _logit_model.predict(x_data)[0]            # scalar class
     proba = _logit_model.predict_proba(x_data)[0,1]       # probabilities for all classes
     
